@@ -8,27 +8,22 @@
 
 
 
-
-// chiedere il nome
-    var userName = document.getElementById("userName").value;
-    console.log(userName)
-
-
-// Il numero di chilometri da percorrere
-    var kmToGo = document.getElementById("kmToGo").value;
-    console.log(kmToGo)
-
-// Età del passeggero
-    let age = document.querySelector("select#ageSelector")
-
-age.addEventListener(`click`,
-
-
-
-)
-
-// creare una funzione che invii i dati e generi il costo del biglietto
 function generateTicket(){
+    // chiedere il nome
+        var userName = document.getElementById("userName").value;
+        console.log(userName)
+
+    // Il numero di chilometri da percorrere
+        var kmToGo = document.getElementById("kmToGo").value;
+        console.log(kmToGo)
+
+    // Età del passeggero
+        var age = document.getElementById("ageSelector").value;
+        console.log(age)
+
+        
+// creare una funzione che invii i dati e generi il costo del biglietto
+
     
 }
 
