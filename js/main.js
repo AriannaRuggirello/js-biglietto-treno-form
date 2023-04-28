@@ -10,42 +10,41 @@
 
 function generate_ticket(){
     // var globali
-    let ticketDiscount, total, basePrice;
+    let userName, kmToGo, age, ticketRate, ticketCost, total;
 
     // chiedere il nome
-        var userName = document.getElementById("userName").value;
+        userName = document.getElementById("userName").value;
         console.log(userName)
 
     // Il numero di chilometri da percorrere
-        var kmToGo = document.getElementById("kmToGo").value;
+        kmToGo = document.getElementById("kmToGo").value;
         console.log(kmToGo)
 
     // Età del passeggero
-        var age = document.getElementById("ageSelector").value;
+        age = document.getElementById("ageSelector").value;
         console.log(age)
 
     // il prezzo del biglietto è definito in base ai km (0.21 € al km)
-        let ticketRate = (0.21);
-        let ticketCost = kmToGo * ticketRate;
+        ticketRate = (0.21);
+        ticketCost = kmToGo * ticketRate;
         console.log("train ticket costs " + ticketCost);   
 
         // ticketCost = document.getElementById("ticket_cost").innerHTML = "il costo del biglietto è € " + ticketCost;
-        
-        
+        total = ticketCost;
 
         if (age == "under18") { // va applicato uno sconto del 20% per i minorenni 
-            total = ticketCost -((ticketCost * 20) / 100) ;
+            total = ticketCost -(( ticketCost * 20 ) / 100) ;
                 
         } else if (age == "over65") {// va applicato uno sconto del 40% per gli over 65
-            total = ticketCost -((ticketCost * 40) / 100) 
+            total = ticketCost -(( ticketCost * 40 ) / 100) ;
         } 
         else (age == "over18") 
         {
-            total = ticketCost;
+            
         }
-     
+        
         console.log(total);
-        document.getElementById("ticket_cost").innerHTML = " Sono € :" + " " + total.toFixed(2);
+        document.getElementById("price").innerHTML = " Sono € :" + " " + total.toFixed(2);
     
 }
 
