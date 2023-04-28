@@ -10,16 +10,20 @@
 <body>
         
     <section>
-        Name: <input type="text" id="userName" >
-        Km: <input type="text" id="kmToGo">
-        Age: <select id="">
-            <option>Under 18</option>
-            <option>Over 18</option>
-            <option>Over 65</option>
+        Name: 
+        <input type="text" name="nome" id="userName">
+        Km: 
+        <input type="text" name="km" id="kmToGo">
+        Age: 
+        <select name="age" id="ageSelector">
+            <option value="under18">Under 18</option>
+            <option value="over18">Over 18</option>
+            <option value="over65">Over 65</option>
+        </select>
             
 
-        <button onclick="generate()">Generate</button>
-        <button>Reset</button>
+        <button type="button" onClick="generate_ticket()">Generate</button>
+        <button type="button">Reset</button>
     </section>
 
 

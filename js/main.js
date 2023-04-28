@@ -16,10 +16,21 @@
 
 // Il numero di chilometri da percorrere
     var kmToGo = document.getElementById("kmToGo").value;
-
+    console.log(kmToGo)
 
 // Età del passeggero
+    let age = document.querySelector("select#ageSelector")
 
+age.addEventListener(`click`,
+
+
+
+)
+
+// creare una funzione che invii i dati e generi il costo del biglietto
+function generateTicket(){
+    
+}
 
 
 // il prezzo del biglietto è definito in base ai km (0.21 € al km)
