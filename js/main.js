@@ -9,6 +9,9 @@
 
 
 function generate_ticket(){
+    // var globali
+    let ticketDiscount, total, basePrice;
+
     // chiedere il nome
         var userName = document.getElementById("userName").value;
         console.log(userName)
@@ -29,13 +32,28 @@ function generate_ticket(){
         // ticketCost = document.getElementById("ticket_cost").innerHTML = "il costo del biglietto è € " + ticketCost;
 
     // va applicato uno sconto del 20% per i minorenni 
+    age = document.getElementById("ageSelector");
+    const options = ["under18", "over18", "over65"];
+    
+    options.forEach()
 
+    if (age === "under18") {
+        ticketDiscount = 20;
+               
+    } else if (age === "over65") {// va applicato uno sconto del 40% per gli over 65
+    
+        ticketDiscount = 40;
+    } 
+    else (age === "over18") 
+    {
+        ticketDiscount = 0;
+    }
 
+    basePrice = ticketCost * ticketDiscount / 100;
+    total = ticketCost - basePrice;
+    console.log(total);
 
-    // va applicato uno sconto del 40% per gli over 65
-        
-
-
+    document.getElementById("my_id").innerHTML = " Sono € :" + " " + total.toFixed(2);
     
 }
 
@@ -47,27 +65,7 @@ function generate_ticket(){
 
 
 
-// var globali
-    // let ticketDiscount, total, basePrice;
 
 
 
-// // Se user >18 
-//     if (userAge < 18) {
-//         // allora tot.€.biglietto -20%
-//         ticketDiscount = 20;
-       
-//     } else if (userAge >= 65) {
-//     // Altrimenti user >65 allora tot.€.biglietto -40%
-//         ticketDiscount = 40;
-//     } 
-//     else {
-//         ticketDiscount = 0;
-//     }
 
-//     basePrice = ticketCost * ticketDiscount / 100;
-//     total = ticketCost - basePrice;
-
-// // L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). 
-//     console.log(total);
-//     document.getElementById("my_id").innerHTML = " Sono € :" + " " + total.toFixed(2);
