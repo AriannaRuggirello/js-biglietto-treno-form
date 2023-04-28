@@ -8,7 +8,7 @@
 
 
 
-function generateTicket(){
+function generate_ticket(){
     // chiedere il nome
         var userName = document.getElementById("userName").value;
         console.log(userName)
@@ -25,13 +25,14 @@ function generateTicket(){
         let ticketRate = (0.21);
         let ticketCost = kmToGo * ticketRate;
         console.log("train ticket costs " + ticketCost);   
-        
-        // ticketCost = document.getElementById("ticket_cost").innerHTML = "il costo del biglietto è " + ticketCost;
+
+        // ticketCost = document.getElementById("ticket_cost").innerHTML = "il costo del biglietto è € " + ticketCost;
+
     // va applicato uno sconto del 20% per i minorenni 
 
 
 
-    // va applicato uno sconto del 40% per gli over 65.
+    // va applicato uno sconto del 40% per gli over 65
         
 
 
@@ -50,11 +51,6 @@ function generateTicket(){
     // let ticketDiscount, total, basePrice;
 
 
-
-// // Calcolo km * 0,21€
-//     let ticketRate = (0.21);
-//     let ticketCost = trip * ticketRate;
-//     console.log("train ticket costs " + ticketCost);   
 
 // // Se user >18 
 //     if (userAge < 18) {
