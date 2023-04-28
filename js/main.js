@@ -21,21 +21,25 @@ function generateTicket(){
         var age = document.getElementById("ageSelector").value;
         console.log(age)
 
+    // il prezzo del biglietto è definito in base ai km (0.21 € al km)
+        let ticketRate = (0.21);
+        let ticketCost = kmToGo * ticketRate;
+        console.log("train ticket costs " + ticketCost);   
         
-// creare una funzione che invii i dati e generi il costo del biglietto
+        // ticketCost = document.getElementById("ticket_cost").innerHTML = "il costo del biglietto è " + ticketCost;
+    // va applicato uno sconto del 20% per i minorenni 
+
+
+
+    // va applicato uno sconto del 40% per gli over 65.
+        
+
 
     
 }
 
 
-// il prezzo del biglietto è definito in base ai km (0.21 € al km)
 
-
-// va applicato uno sconto del 20% per i minorenni 
-
-
-
-// va applicato uno sconto del 40% per gli over 65.
 
 
 
