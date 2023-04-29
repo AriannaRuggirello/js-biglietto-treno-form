@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+   height: 100vh;
+}
+
+section{
+    
+    margin: 20px auto;
+    border: 1px solid #3c5f51;
+    background-color: #b6bf89;
+    color: #252d34;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    text-align: center;
+    border:1px solid #4F493F;
+    border-radius: 10px;
+}
+
+button{
+    background-color: #ac86dd;
+    border: 2px solid #ac86dd;
+    color: white;
+    margin-left: 15px;
+}
+
+.banner{
+    border: #252d34 1px solid;
+    margin: 0 20px;
+}
+
+.passenger{
+    background-color: #ac86dd;
+    
+
+}

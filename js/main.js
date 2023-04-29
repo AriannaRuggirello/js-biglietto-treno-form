@@ -15,6 +15,8 @@ function generate_ticket(){
     // chiedere il nome
         userName = document.getElementById("userName").value;
         console.log(userName)
+        
+        user = document.getElementById("user").innerHTML = userName ;
 
     // Il numero di chilometri da percorrere
         kmToGo = document.getElementById("kmToGo").value;
@@ -44,7 +46,7 @@ function generate_ticket(){
         }
         
         console.log(total);
-        document.getElementById("price").innerHTML = " Sono € :" + " " + total.toFixed(2);
+        document.getElementById("price").innerHTML = "€" + " " + total.toFixed(2);
     
 }
 
