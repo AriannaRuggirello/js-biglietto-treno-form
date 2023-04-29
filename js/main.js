@@ -10,45 +10,57 @@
 
 function generate_ticket(){
     // var globali
-    let userName, kmToGo, age, ticketRate, ticketCost, total;
+    let ticketDiscount, total, basePrice;
 
     // chiedere il nome
-        userName = document.getElementById("userName").value;
+        var userName = document.getElementById("userName").value;
         console.log(userName)
-        
+
         user = document.getElementById("user").innerHTML = userName ;
 
     // Il numero di chilometri da percorrere
-        kmToGo = document.getElementById("kmToGo").value;
+        var kmToGo = document.getElementById("kmToGo").value;
         console.log(kmToGo)
 
     // Età del passeggero
-        age = document.getElementById("ageSelector").value;
+        var age = document.getElementById("ageSelector").value;
         console.log(age)
 
     // il prezzo del biglietto è definito in base ai km (0.21 € al km)
-        ticketRate = (0.21);
-        ticketCost = kmToGo * ticketRate;
+        let ticketRate = (0.21);
+        let ticketCost = kmToGo * ticketRate;
         console.log("train ticket costs " + ticketCost);   
 
         // ticketCost = document.getElementById("ticket_cost").innerHTML = "il costo del biglietto è € " + ticketCost;
-        total = ticketCost;
-
-        if (age == "under18") { // va applicato uno sconto del 20% per i minorenni 
-            total = ticketCost -(( ticketCost * 20 ) / 100) ;
-                
-        } else if (age == "over65") {// va applicato uno sconto del 40% per gli over 65
-            total = ticketCost -(( ticketCost * 40 ) / 100) ;
-        } 
-        else (age == "over18") 
-        {
-            
-        }
         
+        
+
+        if (age == "junior") { // va applicato uno sconto del 20% per i minorenni 
+            ticketDiscount = 20;
+                
+        } else if (age == "senior") {// va applicato uno sconto del 40% per gli over 65
+        
+            ticketDiscount = 40;
+        } 
+        else
+        {
+            ticketDiscount = 0;
+        }
+
+        basePrice = ticketCost * ticketDiscount / 100;
+        total = ticketCost - basePrice;
         console.log(total);
+
         document.getElementById("price").innerHTML = "€" + " " + total.toFixed(2);
     
 }
+
+
+
+function nascondi() {
+    history.go(0);
+}
+
 
 
 

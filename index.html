@@ -15,20 +15,20 @@
             <div class="row">
                 <div class="col">
                     <h4> Name:</h4>
-                    <input type="text" name="nome" id="userName">
+                    <input type="text" id="userName" placeholder="Inserisci nome">
                 </div>
     
                 <div class="col">
                     <h4> Km: </h4>
-                    <input type="text" name="km" id="kmToGo">
+                    <input type="text" id="kmToGo" placeholder="Inserisci km">
                 </div>
     
                 <div class="col">
                     <h4>Age: </h4>
-                    <select name="age" id="ageSelector">
-                        <option value="under18">Under 18</option>
-                        <option value="over18">Over 18</option>
-                        <option value="over65">Over 65</option>
+                    <select id="ageSelector">
+                        <option value="junior">Under 18</option>
+                        <option value="adult">Over 18</option>
+                        <option value="senior">Over 65</option>
                     </select>    
                 </div>
             </div>
@@ -36,13 +36,13 @@
             
             <div class="container overflow-hidden text-center ">
                 <div class="row  justify-content-center py-3">
-                    <button class="col-lg-2" type="button" onClick="generate_ticket()">Generate</button>
-                    <button class="col-lg-2" type="button">Reset</button>
+                    <button class="col-lg-2" type="button" value=”Mostra” onclick="generate_ticket()">Generate</button>
+                    <button class="col-lg-2" type="button" value=”Nascondi” onclick="nascondi()">Reset</button>
                 </div>
             </div>
         </section>
     
-        <section class="container text-center">
+        <section id="content" class="container text-center">
             <h2>YOUR TICKET</h2>
             <div class="row banner">
                 <div class="col passenger">
@@ -64,7 +64,6 @@
                 <div class="col">
                     <h4>Ticket Price</h4>
                     <h6 id="price"></h6>
-
                 </div>
             </div>
         </section>
