@@ -29,12 +29,8 @@ function generate_ticket(){
     // il prezzo del biglietto è definito in base ai km (0.21 € al km)
         let ticketRate = (0.21);
         let ticketCost = kmToGo * ticketRate;
-        console.log("train ticket costs " + ticketCost);   
-
-        // ticketCost = document.getElementById("ticket_cost").innerHTML = "il costo del biglietto è € " + ticketCost;
+        console.log("train ticket costs " + ticketCost);  
         
-        
-
         if (age == "junior") { // va applicato uno sconto del 20% per i minorenni 
             ticketDiscount = 20;
                 
@@ -52,14 +48,20 @@ function generate_ticket(){
         console.log(total);
 
         document.getElementById("price").innerHTML = "€" + " " + total.toFixed(2);
+
+        const list = document.getElementById("content").classList;
+        list.add("visible");
+}
     
+    
+    function nascondi() {
+        document.getElementById("upper").classList.remove("content");
+        history.go(0);
 }
+   
 
 
 
-function nascondi() {
-    history.go(0);
-}
 
 
 

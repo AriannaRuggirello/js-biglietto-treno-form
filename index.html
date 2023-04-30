@@ -10,7 +10,7 @@
 </head>
 <body>
     <main>
-        <section class="container text-center">
+        <section id="upper" class="container text-center">
             <h2>CALCULATE TRAIN TICKET PRICE</h2>
             <div class="row">
                 <div class="col">
@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            
+            <!-- buttons -->
             <div class="container overflow-hidden text-center ">
                 <div class="row  justify-content-center py-3">
                     <button class="col-lg-2" type="button" value=”Mostra” onclick="generate_ticket()">Generate</button>
@@ -41,10 +41,10 @@
                 </div>
             </div>
         </section>
-    
-        <section id="content" class="container text-center">
+        <!--ticket with data  -->
+        <section id="content" class="banner container text-center">
             <h2>YOUR TICKET</h2>
-            <div class="row banner">
+            <div class="row lower">
                 <div class="col passenger">
                     <h4>Name</h4>
                     <h6 id="user"></h6>

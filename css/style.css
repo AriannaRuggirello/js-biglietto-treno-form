@@ -35,14 +35,18 @@ button{
 }
 
 .banner{
-    border: #252d34 1px solid;
+    display: none;
+}
+
+.lower{
+    border: #252d34 1px dashed;
     margin: 0 20px;
 }
 
 .passenger{
-    background-color: #ac86dd;
-    
-
+    border-right: 1px dashed #252d34;
 }
 
-
+.visible{
+    display: block;
+}
