@@ -48,13 +48,13 @@ function generate_ticket(){
         console.log(total);
 
         document.getElementById("price").innerHTML = "€" + " " + total.toFixed(2);
-
+        // aggiungere banner sotto
         const list = document.getElementById("content").classList;
         list.add("visible");
 }
-    
-    
-    function nascondi() {
+
+// rimuovere il banner 
+function nascondi() {
         document.getElementById("upper").classList.remove("content");
         history.go(0);
 }
